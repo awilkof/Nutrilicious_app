@@ -26,6 +26,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-byebug'
   gem 'spring'
+  gem 'annotate'
 end
 
 group :production do
