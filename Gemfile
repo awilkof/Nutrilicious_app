@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.5'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.6.2'
 gem 'simple_form'
 
 #Other
