@@ -3,5 +3,10 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+nutrient_types = NutrientType.create(
+  [
+    { name: 'protein', description: 'tbd' },
+    { name: 'fat', description: 'tbd' },
+    { name: 'carbohydrate', description: 'tbd'}
+  ]
+)

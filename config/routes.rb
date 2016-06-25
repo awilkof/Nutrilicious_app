@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :foods
   
   get 'test', to: "static_pages#test", as: 'test'
   root 'static_pages#home'

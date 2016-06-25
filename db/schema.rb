@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621041747) do
+ActiveRecord::Schema.define(version: 20160625193609) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "name"
     t.string   "image_url"
     t.integer  "calories"
     t.integer  "serving_size"
-    t.integer  "unit_of_m"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "unit_of_m"
   end
 
   create_table "nutrient_types", force: :cascade do |t|
@@ -29,5 +29,16 @@ ActiveRecord::Schema.define(version: 20160621041747) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "nutrients", force: :cascade do |t|
+    t.integer  "food_id"
+    t.integer  "nutrient_type_id"
+    t.integer  "amount"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "nutrients", ["food_id"], name: "index_nutrients_on_food_id"
+  add_index "nutrients", ["nutrient_type_id"], name: "index_nutrients_on_nutrient_type_id"
 
 end

@@ -1,0 +1,10 @@
+<div class="col-xs-6" </div>
+  <h1><%= @food.name %> </h1>
+  <div class="image-responsive"><%= image_tag(@food.image_url) %> </div>
+
+  <div class="panel" </div>
+    <% @food.nutrients.each do |nutrient| %>
+     <%=nutrient.amount%>
+    <%end %>
+  </div>
+</div>
