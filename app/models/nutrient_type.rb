@@ -10,5 +10,8 @@
 #
 
 class NutrientType < ActiveRecord::Base
-  belongs_to :nutrient
+  validates :name, uniqeness: true
+  has_many :nutrients
+  has_many :foods, through: :nutrients
+
 end

@@ -14,7 +14,7 @@
 
 class Food < ActiveRecord::Base
 has_many :nutrients
-
+has_many :nutrient_types, through :nutrients
 validates_presence_of :name
 validates :name, uniqueness: {case_sensitive: false}
 

@@ -12,5 +12,6 @@
 
 class Nutrient < ActiveRecord::Base
   belongs_to :food
-  has_one :nutrient_type
+  belongs_to :nutrient_type
+  validates :food, uiniqueness: {scope: nutrient_type_id}
 end

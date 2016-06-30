@@ -3,10 +3,15 @@
 #
 # Examples:
 #
-nutrient_types = NutrientType.create(
+nutrient_types = NutrientType.find_or_create(
   [
     { name: 'protein', description: 'tbd' },
     { name: 'fat', description: 'tbd' },
     { name: 'carbohydrate', description: 'tbd'}
   ]
 )
+
+foods = Food.create([
+  # Use the attributes from the food rb to seed in the table here
+  # {name: 'Yogurt', description: 'Greek Yorgurt', serving_size: 8, u_of_m: 'm'},
+  ])
